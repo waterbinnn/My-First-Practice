@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    "use strict";
+</script>
+<script>
+    // 변수를 만들기 위해 var 을 쓸 수도 있지만 오래된 방법 
+    let user = "John",
+        age = "27",
+        message = 'Hello';
+</script>
+
+<script>
+    // 상수 constant (변화하지 않는 변수를 선언할 땐, let 대신 const 사용)
+    const myBirthday = '27.07.1996';
+    // 대문자 상수 : 기억하기 힘든 값을 변수에 할당 /하드코딩한 값의 별칭 만들때 사용 
+    const COLOR_RED = "#F00";
+    const COLOR_GREEN = "#0F0";
+    const COLOR_BLUE = "#00F";
+    const COLOR_ORANGE = "#FF7F00";
+
+    // 색상을 고르고 싶을 때 별칭을 사용할 수 있게 되었습니다.
+    let color = COLOR_ORANGE;
+    // alert(color); // #FF7F00
+</script>
+
+<script>
+    let name = "John";
+    let admin = name;
+    // alert(admin);
+
+    let admin, name;
+    name = "John";
+    admin = name;
+    // alert(admin);
+
+    // 행성변수이름짓기 
+    let ourPlanetName = "Earth";
+    // 현재 방문자를 나타내는 변수 이름 짓기 
+    let currentUserName = "John";
+</script>
+<script>
+    // ---자료형---
+    // 1. 숫자형 
+    (1 / 0); // 무한대 
+    (Infinity); //무한대 
+    ("숫자가 아님" / 2); //Nan,문자열을 숫자로 나누면 오류발생
+
+    // 2. 문자형 
+    let str = "Hello"; //큰따옴표
+    let str2 = 'Hello'; //작은따옴표
+    let phrase = `can embed another ${str}`; //역따옴표
+    // --역 따옴표로 변수나 표현식을 감싼 후 ${…}안에 넣어주면, 
+    //  원하는 변수나 표현식을 문자열 중간에 손쉽게 넣을 수 있다.--
+    let name = "Rujin";
+    (`Hello,${name}!`); //변수를 문자열 중간에 삽입
+    (`the result is ${1 + 2}`); //표현식을 문자열 중간에 삽입
+
+    // 3. 불린형 - true,flase
+    let nameFieldChecked = true; // 네, name field가 확인되었습니다(checked).
+    let ageFieldChecked = false; // 아니요, age field를 확인하지 않았습니다(not checked)
+
+    // 4. null - null값만을 위한 독립자료형, 존재하지 않는 값(nothing), 비어있는값(empty), 알수없는값(unknown)을 나타낼때 사용
+    // 5. Undefined 값 - Undefined 값만을 위한 독립자료형. 값이 할당되지 않은 상태를 나타낼때 사용 
+    let age;
+    // alert(age); // undefined 출력
+
+// 6. 객체와 심볼 - 객체형: 복잡한 데이터 구조를 표현할 때 / 심볼형:객체의 고유 식별자를 만들 때
+
+// 7. typeof 연산자 : 인수의 자료형 반환
+// 연산자 형태 typeof x / 함수형태 typeof (x) 괄호가 있든없든 결과 동일 
+// typeof undefined // "undefined"
+
+// typeof 0 // "number"
+
+// typeof 10n // "bigint"
+
+// typeof true // "boolean"
+
+// typeof "foo" // "string"
+
+// typeof Symbol("id") // "symbol"
+
+// typeof Math // "object"  (1)
+
+// typeof null // "object"  (2) - 언어상의 오류 null은 객체가 아님
+
+// typeof alert // "function"  (3)
+
+</script>
+<script>
+    // 브라우저는 사용자와 상호작용 할 수 있는 세가지 함수 제공 
+    // 1. alert("hello");
+    // 2. result = prompt(title,[default]);
+    let age = prompt('나이를 입력해주세요.', 27);
+    alert(`당신의 나이는 ${age}살 입니다.`);
+    // 3. result = confirm(question);
+    let isBoss = confirm("당신이 주인인가요?");
+    alert(isBoss); //확인버튼을 눌렀다면 true 출력
+</script>
+
+<script>
+    // 문자형으로 변환 
+    let value = true;
+    alert(typeof value); // boolean
+
+    value = String(value); // 변수 value엔 문자열 "true"가 저장됩니다.
+    alert(typeof value); // string
+
+    // 숫자형으로 변환 
+    alert(Number("   123   ")); // 123
+    alert(Number("123z"));      // NaN ("z"를 숫자로 변환하는 데 실패함)
+    alert(Number(true));        // 1
+    alert(Number(false));       // 0
+
+    // 불린형으로 변환 
+    alert(Boolean(1)); // 숫자 1(true)
+    alert(Boolean(0)); // 숫자 0(false)
+    alert(Boolean("hello")); // 문자열(true)
+    alert(Boolean("")); // 빈 문자열(false)
+</script>
+<script>
+    // 이항 연산자 '+'와 문자열 연결
+    alert('1' + 2); // "12"
+    alert(2 + '1'); // "21"
+    alert(2 + 2 + '1'); // '221'이 아니라 '41'이 출력
+    alert(6 - '2'); // 4, '2'를 숫자로 바꾼 후 연산이 진행
+    alert('6' / '2'); // 3, 두 피연산자가 숫자로 바뀐 후 연산이 진행
+
+    // 단항 연산자 +와 숫자형으로의 변환
+    // 숫자에는 아무런 영향을 미치지 않는다
+    let x = 1;
+    alert(+x); // 1
+
+    let y = -2;
+    alert(+y); // -2
+
+    // 숫자형이 아닌 피연산자는 숫자형으로 변화
+    alert(+true); // 1
+    alert(+"");   // 0
+
+    let apples = "2";
+    let oranges = "3";
+
+    // 단항 덧셈 연산자(+)가 먼저 문자열을 숫자로 변환시키고, 이항 덧셈 연산자가 그 결과들을 더해주고 있다.
+    // alert(apples + oranges); // 23, 이항 덧셈 연산자는 문자열을 연결
+
+    let apples = "2";
+    let oranges = "3";
+
+    // 이항 덧셈 연산자가 적용되기 전에, 두 피연산자는 숫자형으로 변화
+    // alert(+apples + +oranges); // 5
+
+    // `Number(...)`를 사용해서 같은 동작을 하는 코드를 작성할 수 있지만, 더 길다.
+    // alert( Number(apples) + Number(oranges) ); // 5
+
+    let n = 2;
+    n += 5; // n은 7이 됩니다(n = n + 5와 동일).
+    n *= 2; // n은 14가 됩니다(n = n * 2와 동일).
+
+    // alert(n); // 14
+
+    let n = 2;
+
+    n *= 3 + 5;
+
+    // alert(n); // 16  (*=의 우측이 먼저 평가되므로, 위 식은 n *= 8과 동일.)
+
+//    <---- 증가 감소 연산자 ( 변수에만 쓸 수 있음!!!! )--->
+// 증가(increment) 연산자 ++는 변수를 1 증가
+    let counter = 2;
+    counter++;      // counter = counter + 1과 동일하게 동작. 하지만 식은 더 짧다.
+    // alert(counter); // 3
+
+// 감소(decrement) 연산자 --는 변수를 1 감소
+    let counter = 2;
+    counter--;      // counter = counter - 1과 동일하게 동작. 하지만 식은 더 짧다.
+    // alert(counter); // 1
+
+// 반환값을 사용하지 않는 경우라면, 전위형(++변수)과 후회형(변수++) 에 차이가 없음 
+    let counter = 0;
+    counter++;
+    ++counter;
+    // alert( counter ); // 2, 위 두 라인은 동일한 연산을 수행
+
+// 값을 증가시키고 난 후, 증가한 값을 바로 사용하려면 전위형 증가 연산자를 사용
+    let counter = 0;
+    // alert( ++counter ); // 1
+
+// 값을 증가시키지만, 증가 전의 기존값을 사용하려면 후위형 증가 연산자를 사용
+    let counter = 0;
+    // alert( counter++ ); // 0
+// 가독성을 위해 아래줄 처럼 코드 한줄엔 특정 동작 하나 에 관련된 내용만 작성하는게 좋다!!
+    let counter = 1;
+    // alert( 2 * counter );
+    counter++;
+
+    "" + 1 + 0 //10 1과 0을 문자형으로 변환
+    "" - 1 + 0 //-1 뺄셈은 숫자형만 받음 
+    true + false //1
+    6 / "3" //2
+    "2" * "3" //6
+    4 + 5 + "px" // 9px
+    "$" + 4 + 5 //$45
+    "4" - 2 //2
+    "4px" - 2 //NaN
+    7 / 0 // Infinity
+    "  -9  " + 5 //"  -9  5" 피연산자 중 하나가 문자열이기 때문에 문자열로받음 
+    "  -9  " - 5 //-14 뺄셈연산자는 인수를 숫자형으로 변화 
+    null + 1 //1 숫자형으로 변환 시 null 은 0 
+    undefined + 1 //NaN underined는 숫자형으로 변환시 NaN
+    " \t \n" - 2 //-2 \t \n 은 공백을 만드는 문자이기 때문에 숫자로 변환시 0이 됨 
+
+    5 > 4 // true
+    "apple" > "pineapple" //false "a"보다 "p"의 사전순서가 더 큼
+    "2" > "12" //true
+    undefined == null //true 
+    undefined === null //false 형이 다름
+    null == "\n0\n" //false null은 오직 undefined와 같음
+    null === +"\n0\n" //false 형이 다르기 때문
+</script>
+
+<script>
+//    --- if와 '?'를 사용한 조건 처리 ---
+    let accessAllowed;
+    let age = prompt('나이를 입력해 주세요.', '');
+
+    if (age > 18) {
+    accessAllowed = true;
+    } else {
+    accessAllowed = false;
+    }
+    // '물음표(question mark) 연산자’라고도 불리는 '조건부(conditional) 
+    // 연산자’를 사용하면 위 예시를 더 짧고 간결하게 변형할 수 있다
+    let result = condition ? value1 : value2;
+    // 평가 대상인 condition이 truthy라면 value1이, 그렇지 않으면 value2가 반환
+// 동일하게 동작함
+    let accessAllowed = age > 18;
+
+    let age = prompt('나이를 입력해주세요.', 18);
+// ---
+    let message = (age < 3) ? '아기야 안녕?' :
+    (age < 18) ? '안녕!' :
+    (age < 100) ? '환영합니다!' :
+    '나이가 아주 많으시거나, 나이가 아닌 값을 입력 하셨군요!';
+// 동일하게 동작함
+    if (age < 3) {
+    message = '아기야 안녕?';
+    } else if (age < 18) {
+    message = '안녕!';
+    } else if (age < 100) {
+    message = '환영합니다!';
+    } else {
+    message = '나이가 아주 많으시거나, 나이가 아닌 값을 입력 하셨군요!';
+    }
+
+let OfficialName = prompt("자바스크립트의 '공식'이름은 무엇일까요?","")
+if (OfficialName == "ECMAScript"){
+    alert ("정답입니다!");
+} 
+else{
+    alert("모르셨나요? 정답은 ECMAScript입니다!");
+}
+
+let value = prompt("숫자를 입력하세요",0);
+if (value > 0){
+    alert("1");
+} else if(value < 0){
+        alert("-1")
+    }
+    else{
+        alert("0")
+    }
+// ---실습(if 를 ? 로 교체)
+
+    let result;
+
+    if (a + b < 4) {
+    result = '미만';
+    } else {
+    result = '이상';
+    }
+
+    let result = (a + b  < 4) ? '미만':'이상'
+// -------
+    let message;
+
+    if (login == '직원') {
+    message = '안녕하세요.';
+    } else if (login == '임원') {
+    message = '환영합니다.';
+    } else if (login == '') {
+    message = '로그인이 필요합니다.';
+    } else {
+    message = '';
+    }
+
+let message = (login == '직원') ? '안녕하세요.': 
+    (login == '임원') ? '환영합니다.' :
+    (login == '') ? '로그인이 필요합니다.' :
+    '';
+
+</script>
+
+
+<body>
+
+</body>
+
+</html>
