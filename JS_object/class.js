@@ -5,17 +5,27 @@ class Person{
         this.second = second;
 }
 sum(){
-    return'this:' +(this.first+this.second);
+    return this.first+this.second;
   }
 }
 
-let Kim = new Person('kim',10,30);
-Kim.sum = function(){
-    return 'this : '+(this.first+this.second);
+class PersonPlus extends Person{  //persondl personPlus에 상속됨
+    constructor(name,first,second,third){
+        super(name,first,second);
+        this.third = third;
+    }
+    sum(){
+        return super.sum()+this.third;
+    }
+
+    avg(){
+        return(this.first+this.second+this.third)/3;
+    }
 }
 
-let lee = new Person('lee',10,10);
+let Kim = new PersonPlus('Kim',10,30,50);
 
 console.log("Kim.sum()",Kim.sum());
-console.log("lee.sum()",lee.sum());
+console.log("Kim.avg()",Kim.avg()); 
+
 
