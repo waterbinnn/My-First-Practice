@@ -150,7 +150,7 @@ let target = 'as';
 let pos = 0;
 while (true) {
     let foundPos = str.indexOf(target,pos);
-    lf (foundPos == -1) break;
+    lf (foundPos == -1) {
 
     alert( `위치: ${foundPos}` );
     pos = foundPos + 1;

@@ -3,7 +3,7 @@
 // Function 
 
 // Function decalration 함수 선언 
-// functio name(parm1,param2) {body ... return;}
+// function name(parm1,param2) {body ... return;}
 
 // js 에서 funtion 은 object 이다 
 
@@ -27,12 +27,12 @@ const subin = { name: 'subin' };
 changeName(subin); // subin 이 가리키고 있는 이름이 coder로 변경하게 됨 
 console.log(subin); // name : 'coder'
 
-// 3. Defaulr paeameters (added in ES6)
-function showemssage(message, from = 'unknown'){
+// 3. Default parameters (added in ES6)
+function showmessage(message, from = 'unknown'){
     console.log(`${message} by ${from}`);
 }
-showemssage('Hi!');
-showemssage('Hi!','sis');
+showmessage('Hi!');
+showmessage('Hi!','sis');
 
 // 4. Rest parameters 
 function printAll(...args) { //... 배열형태 전달 arg : 3개의 값이 담겨있는 배열을 의미
@@ -123,17 +123,17 @@ randomQuiz('love you', printYes, printNo);
 // Arrow function
 //always anonymous function
 
-const simplePrint = function () {
-    console.log('simplePrint');
-};
+// const simplePrint = function () {
+//     console.log('simplePrint');
+// };
 
 const simplePrint = () => console.log('simplePrint');
 
 const add = (a,b) => a + b; // 훨 간결 ! 
 
-const add = function(a,b) {
-    return a + b;
-} ; 
+// const add = function(a,b) {
+//     return a + b;
+// } ; 
 
 //IIFE : Immediately Invoked Function Expressions
 (function hello() {
