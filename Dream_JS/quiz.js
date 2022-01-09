@@ -39,20 +39,15 @@ console.clear();
 
 const fruits = ['🍎' , '🥝' ,'🍌' , '🍒'];
 
-fruits.forEach((fruits) => console.log(fruits));
 
 // Q3. make this array look like this: [5, 4, 3, 2, 1]
 
 const array = [1, 2, 3, 4, 5];
-console.log(array.reverse());
 
 //Q4. make new array without the first two elements
 {
 const array2 = [1, 2, 3, 4, 5];
-const newArray = array2.splice(2);
-console.log(newArray);
 }
-
 
 
 class Student {
@@ -71,9 +66,6 @@ class Student {
     new Student('E', 18, true, 88),
   ];
 
-  console.log(students.indexOf(90));
-  
-  const studentsArray = new Array();
 
 // Q5. find a student with the score 90
 
