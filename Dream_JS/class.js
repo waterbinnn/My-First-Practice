@@ -8,7 +8,7 @@ class Person {
     //constructor 생성자를 이용해 오브젝트를 만들때 필요한 데이터 전달
     constructor(name, age) {
         //fields 전달받은 데이터를 할당
-        this.name = name;
+        this.name = name; 
         this.age = age;
     }
 
@@ -90,7 +90,7 @@ class shape {
     }
 
     getArea() {
-        return this.width * this.height;
+        return this.width * this.height; 
     }
 }
 
@@ -104,7 +104,7 @@ class Triangle extends shape {
         return (this.width * this.height) / 2;
     }
 }
-
+ 
 const rectangle = new Rectangle(20,20,'blue');
 rectangle.draw();
 console.log(rectangle.getArea());
@@ -112,6 +112,19 @@ console.log(rectangle.getArea());
 const triangle = new Triangle(20,20,'orange');
 triangle.draw();
 console.log(triangle.getArea());
+
+
+//6. Class checking: instanceOf
+console.log(rectangle instanceof Rectangle); //true
+console.log(triangle instanceof Rectangle); //false
+console.log(triangle instanceof Triangle); //true
+console.log(triangle instanceof Shape); //true
+console.log(triangle instanceof Object); //true
+console.log(triangle instanceof toString()); //[object object]
+
+
+
+
 
 
 

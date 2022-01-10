@@ -4,7 +4,7 @@
 
 
 // 1. Literals and properties
-
+ 
 const obj1 = {}; 
 const obj2 = new Object(); 
 
