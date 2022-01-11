@@ -11,7 +11,6 @@ function fetchUser() {
 
 // promise 함수를 async 를 사용해 자동으로 코드 블록이 프로미스를 간편하게 사용할 수 있게 됨 
 async function fetchUser() {
-    // do request
     return 'subin';
 }
 
@@ -19,14 +18,14 @@ const user = fetchUser();
 user.then(console.log);
 console.log(user);
 
-//2. await 
+//2. await //async 가 있을때만 사용가능 
 function delays(ms) {
     return new Promise(resolve => setTimeout(resolve,ms));
 }
 
 async function getApple() {
-    await delays(2000);
-    return '🍎';
+    await delays(2000); //delay가 끝날때까지 기다렸다가 
+    return '🍎'; // return 
 }
 
 async function getBanana() {
@@ -34,7 +33,7 @@ async function getBanana() {
     return '🍌';
 }
 
-// function pickfruits() {
+// function pickfruits() { //promise chaining 으로 적으면 
 //     return getApple()
 //     .then(apple => {
 //         return getBanana().then(banana => `${apple} + ${banana}`);
@@ -50,10 +49,12 @@ async function pickfruits() {
 pickfruits().then(console.log); //🍎 + 🍌
 
 //3. usefull promise APIs // 프로미스 배열을 전달하면 병렬적으로 작동하게 모여줌 
+// promise.all()
+// promise.race()
 
 function pickAllFruits() {
     return Promise.all([getApple(), getBanana()]) // 배열을 전달 
-    .then(fruits => fruits.join(' + ')); // 다 받아지면 -> 과일의 배열이 전달이 됨 
+    .then(fruits => fruits.join(' + ')); // 다 받아지면 -> 과일의 배열이 전달이 됨 -> string 으로 
 }
 pickAllFruits().then(console.log); //🍎 + 🍌
 
