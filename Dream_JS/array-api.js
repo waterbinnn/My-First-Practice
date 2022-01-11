@@ -1,7 +1,7 @@
 // Q1. make a string out of an array
 {
     const fruits = ['apple', 'banana', 'orange'];
-    const result = fruits.join(', and ');
+    const result = fruits.join(' ');
     console.log(result); // apple, and banana, and orange
   }
   
@@ -24,7 +24,7 @@
   // Q4. make new array without the first two elements
   {
     const array = [1, 2, 3, 4, 5];
-    const result = array.slice(2, 5) // 새로운 배열 만들어야 하기 때문에 splice(배열자체를 수정) 안됨 
+    const result = array.slice(2, 5); // 새로운 배열 만들어야 하기 때문에 splice(배열자체를 수정) 안됨 
     console.log(result); // slice 는 배열에서 원하는 부분만 가져올 수 있음 
 
   }
@@ -75,7 +75,7 @@
   }
   // Q8. check if there is a student with the score lower than 50
   {
-      console.clear();
+      // console.clear();
 //some : 배열중 어떤 것이라도 하나 만족하는 것을 찾을 때 / every : 배열 중 전부 만족하는 것을 찾을 때 
       const result = students.some((student) => student.score < 50);
       console.log(result); // true 

@@ -28,26 +28,31 @@ console.log(calculate('remainder',10,300));
 // Q1 .  make a string out of an array
 console.clear();
 
-// const fruits = ['apple', 'banana', 'orange'];
-
-// for (let fruit of fruits) {
-//     console.log(fruit);
-// }
+const fruits = ['apple', 'banana', 'orange'];
+const result = fruits.join();
+console.log(result);
 
 
 // Q2. make an array out of a string
 
-const fruits = ['🍎' , '🥝' ,'🍌' , '🍒'];
+const fruits = '🍎 , 🥝 ,🍌 , 🍒';
+const result = fruits.split(',');
+console.log(result);
 
 
 // Q3. make this array look like this: [5, 4, 3, 2, 1]
 
 const array = [1, 2, 3, 4, 5];
+const result = array.reverse();
+console.log(result);
 
 //Q4. make new array without the first two elements
-{
-const array2 = [1, 2, 3, 4, 5];
-}
+
+const array = [1, 2, 3, 4, 5];
+const result = array.slice(2,5);
+console.log(array); //[1,2,3,4,5]
+console.log(result); //[3,4,5]
+
 
 
 class Student {
@@ -68,31 +73,59 @@ class Student {
 
 
 // Q5. find a student with the score 90
+const result = students.find((student) => student.score === 90);
+console.log(result);
 
 
 // Q6. make an array of enrolled students
 {
+const result = students.filter((student) => student.enrolled);
+console.log(result);
 }
 
 // Q7. make an array containing only the students' scores
 // result should be: [45, 80, 90, 66, 88]
 {
+    const result = students.map((student) => student.score);
+    console.log(result);
 }
 
 // Q8. check if there is a student with the score lower than 50
 {
+    const result = students.some((student) => student.score < 50);
+    console.log(result);
+
 }
 
 // Q9. compute students' average score
 {
+    const result = students.reduce((prev,curr) => {
+        return prev + curr.score;
+    },0);
+    console.log(result / students.length);
+
+    const result2 = students.reduce((prev,curr) => prev + curr.score, 0);
+    console.log(result2 / students.length);
+
 }
 
-// Q10. make a string containing all the scores
-// result should be: '45, 80, 90, 66, 88'
+// // Q10. make a string containing all the scores
+// // result should be: '45, 80, 90, 66, 88'
 {
+    const result = students
+    .map((student) => student.score)
+    .join();
+
+    console.log(result);
+
 }
 
 // Bonus! do Q10 sorted in ascending order
 // result should be: '45, 66, 80, 88, 90'
-{
-}
+
+    const result = students
+    .map((student) => student.score)
+    .sort((a,b) => a - b)
+    .join();
+
+    console.log(result);

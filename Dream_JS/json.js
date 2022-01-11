@@ -80,7 +80,7 @@ console.clear();
 json = JSON.stringify(rabbit); // 1번에서 해준걸 
 
 const obj = JSON.parse(json,(key, value) => {
-    console.log(`${key},${value}`);
+    // console.log(`${key},${value}`);
     return key === 'birthDate' ? new Date(value) : value;
 });
 console.log(obj);
@@ -89,7 +89,7 @@ rabbit.jump();
 console.log(rabbit.birthDate.getDate());
 console.log(obj.birthDate);
 
-console.clear();
+// console.clear();
 
 // 문자열로 변환된 배열
 let numbers = "[0, 1, 2, 3]";
