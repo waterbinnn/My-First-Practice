@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamil-Inbox</title>
+    <link rel="stylesheet" href="./Inbox.css">
+</head>
+<body>
+    <table class="inbox">
+        <thead class="sr-only">
+            <tr>
+                <th scope="col">
+                    Actions
+                </th>
+                <th scope="col">
+                    Senderr
+                </th>
+                <th scope="col">
+                    Title
+                </th>
+                <th scope="col">
+                    TimeStamp
+                </th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr class="unread">
+                <td>
+                    <div class="inbox-actions">
+                        <div class="inbox-checkbox">
+                            <input type="checkbox" id="inbox-1" />
+                            <label for="inbox-1" class="sr-only">Select this email</label>    
+                        </div>
+                        <button type="button" class="inbox-star">
+                            <span class="sr-only">Add to favorite</span>
+                        </button>
+                    </div>
+                </td>
+                <td>
+                    Groom Edu
+                </td>
+                <td>
+                    <a href="#">
+                        <strong>Rate your course</strong>
+                        <span>with me</span>
+                    </a>
+                </td>
+                <td>
+                    3 : 34 pm
+                </td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr class="read">
+                <td>
+                    <div class="inbox-actions">
+                        <div class="inbox-checkbox">
+                            <input type="checkbox" id="inbox-1" />
+                            <label for="inbox-1" class="sr-only">Select</label>    
+                        </div>
+                        <button type="button" class="inbox-star">
+                            <span class="sr-only">Add to favorite</span>
+                        </button>
+                    </div>
+                </td>
+                <td>
+                    Groom Edu
+                </td>
+                <td>
+                    <a href="#">
+                        <strong class="sr-only">Read</strong>
+                        <span>Rate your course with me</span>
+                    </a>
+                </td>
+                <td>
+                    3 : 34 pm
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="./Inbox.js"></script>
+</body>
+</html>
