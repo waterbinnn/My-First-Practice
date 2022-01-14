@@ -1,0 +1,107 @@
+<!--article : sectioning element 중 하나로 
+    블로그글 뉴스기사 트위트 피드 같은 정보 콘텐츠/ 독립적인 콘텐츠일때 많이 쓴다  -->
+<article>
+    <h1>A tweet from kim</h1>
+    <header>
+        <a href="#">
+            <img src="#" alt="kim">
+        </a>
+        <h2>
+            <a href="#">
+                kim
+            </a>
+        </h2>
+        <dl>
+            <div>
+                <dt>User Name</dt>
+                    <dd>
+                        <a href="#">@waterbin</a>
+                    </dd>
+                      
+            </div>
+            <div>
+                <dt>Posted</dt>
+                     <dd>
+                         <a href="#">
+                            Dec 25
+                         </a>
+                     </dd>
+            </div>
+        </dl>
+        <button type="button" aria-label="options">
+            <!-- icon  -->
+        </button>
+        <div>
+            <button type="button" aria-label="Show less often ">
+                <!-- icon  -->
+            Show less often
+            </button>
+            <button type="button" aria-label="emded tweet ">
+                <!-- icon  -->
+                Embed Tweet
+            </button>
+            <button type="button" aria-label="unfollow">
+                <!-- icon  -->
+                Unfollow @anonymouskim
+            </button>
+            <button type="button" aria-label="mute">
+                <!-- icon  -->
+                Mute @anonymouskim
+            </button>
+            <button type="button" aria-label="block">
+                <!-- icon  -->
+                Block @anonymouskim
+            </button>
+            <button type="button" aria-label="report tweet">
+                <!-- icon  -->
+                Report Tweet
+            </button>
+        </div>
+    </header>
+
+    <p> 
+        <!-- 트윗내용  -->
+        i wanna be a superstar.
+    </p>
+
+    <footer>
+        <!-- header의 친구 하단부의 뉘앙쓰로 묶을수 있는 footer      -->
+        <button type="button">
+            <span class="sr-only">tweet your reply</span> 
+            <!-- span 이 부분은 screen reader only 임 그래서 css 에서 처리하려고 class=sr-only 써줌 -->
+            <strong aria-label="3 replied">3</strong>
+        </button>
+        <button type="button">
+            <span class="sr-only">Retweet it</span>
+            <strong aria-label="3 retweeted">3</strong>
+        </button>
+        <!-- retweet button 을 눌렀을때 나오는 요소들이 아래 div  -->
+        <div>
+            <button type="button">
+                Retweet with comment
+            </button>
+        </div>
+
+        <button type="button">
+            <span class="sr-only">Like this Tweet </span>
+            <strong aria-label="100 liked">100</strong>
+        </button>
+        <button type="button">
+            <span class="sr-only">Share</span>
+        </button>
+         <!-- share button 을 눌렀을때 나오는 요소들이 아래 div  -->
+        <div>
+            <button type="button">
+                Send via Direct Message
+            </button>
+            <button type="button">
+                Add Tweet to Bookmarks
+            </button>
+            <button type="button">
+                Copy link to Tweet
+            </button>
+        </div>
+    </footer>
+</article>
+
+
