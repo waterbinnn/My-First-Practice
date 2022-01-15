@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+  }
+  
+  body {
+    height: 100vh;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: -0.02em;
+    background-color: black;
+  }
+  
+  a {
+    font-size: 18px;
+    line-height: 20px;
+    color: #8492a6;
+    text-decoration: none;
+  }
+  
+  /* ▼ WHERE YOUR CODE BEGINS */
+
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+    background-color: #ffff;
+  }
+  .tab-menu {
+    width: 540px;
+    height: 54px;
+    border-bottom: 1px solid #8492a6 ;
+}
+
+  .tab-menu-item {
+    float: left;
+    margin-right: 16px;
+  }
+
+  .tab-menu-item::after{
+    content: '';
+    display: block;
+    clear: left;
+  }
+
+.tab-menu-item a{
+  display: block;
+  padding: 16px 20px;
+}
+
+.tab-menu-item.selected {
+  border-bottom: 2px solid cornflowerblue ;
+}
+
+.tab-menu-item.selected a{
+  color: rgb(121, 121, 255);
+}
+
