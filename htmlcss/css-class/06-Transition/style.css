@@ -1,0 +1,61 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1024px;
+    background-image: url(https://storage.plus-ex.com/pr/img/experience/detail/girlsplanet999/bg_propose.jpg );
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+button,
+input,
+textarea {
+    font-family: 'Lato', sans-serif;
+}
+
+
+
+button{
+    background-color: rgba(0, 30, 58, 0.192);
+    border: none; 
+}
+
+.line-button {
+    position: relative;
+    padding: 18px 30px;
+    color: rgb(255, 255, 255);   
+    font-size: 16px;
+    line-height: 1.25;
+    cursor: pointer;
+    text-align: center;
+
+}
+
+.line-button::after {
+    content: '';
+    position: absolute;
+    /* 버튼은 인라인이지만 position absolute 줌으로써 자동으로 block 됨 */
+    bottom: 0;
+    left: 0;
+    width: 0; 
+    height: 2px;
+    background-color: #0066FF;
+    transition: width 250ms ease-in, background-color 250ms ease-in;
+
+}
+
+/* 띄어쓰기 안하고 써야하는거 유의 */
+.line-button:hover::after {
+    width: 100%;
+    background-color: tomato;
+
+}
+
