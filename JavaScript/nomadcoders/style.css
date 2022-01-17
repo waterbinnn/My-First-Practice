@@ -1,0 +1,12 @@
+body {
+    background-color: blanchedalmond;
+}
+
+h1 {
+    color: #0066ff;
+    transition: color 0.5s ease-in;
+}
+
+.clicked {
+    color: yellow;
+}
