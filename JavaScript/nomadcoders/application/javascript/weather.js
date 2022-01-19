@@ -1,5 +1,5 @@
-const weather = document.querySelector("#weather span:first-child");
-const city = document.querySelector("#weather span:last-child");
+const city = document.querySelector("#weather span:first-child");
+const weather = document.querySelector("#weather span:last-child");
 const API_KEYS = "685f33fc24b25b65de9585aa5b20bac9";
 
 function onGeoOk(position){
@@ -10,12 +10,12 @@ function onGeoOk(position){
     fetch(url)
         .then((response) => response.json())
         .then((data) => {
-            city.innerText = data.name;
-            weather.innerText = `${data.weather[0].main} / ${data.main.temp}`;
+            city.innerText = `${data.sys.country}`;
+            weather.innerText = "/ " +`${data.weather[0].main}`;
         })
 }
 
 function onGeoError(){
-}
     alert("🥲");
+}
 navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);

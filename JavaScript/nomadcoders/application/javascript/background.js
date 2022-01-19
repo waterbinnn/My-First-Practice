@@ -1,6 +1,6 @@
 //랜덤 이미지 생성
 
-const images = ["1.jpg", "2.jpg", "3.jpg"]; //이미지 array 생성
+const images = ["1.jpeg", "2.jpg", "3.jpg"]; //이미지 array 생성
 
 const chosenImage = images[Math.floor(Math.random() * images.length)]; //랜덤으로 나올수 있는 변수생성
 

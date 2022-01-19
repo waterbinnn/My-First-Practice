@@ -5,37 +5,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <title>Document</title>
 </head>
 
 <body>
-    <form class="hidden" id="login-form">
-        <input required maxlength="15" type="text" placeholder="What is your name?" />
-        <input type="submit" value="Log In" class="login-button" />
-    </form>
-    <h2 id = "clock">00:00:00</h2>
-    <h1 id = "greeting" class = "hidden"></h1>
-    <form id="todo-form" >
-        <input type="text" placeholder="Write a To Do and Press Enter" required/>
-    </form>
-    <ul id="todo-list"></ul>
-    <div id = "quote">
-        <span></span>
-        <br>
-        <span></span>
+    <div class="main-form">
+
+        <h2 id="clock">00:00:00</h2>
+        <div id="weather">
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="form-position">
+
+            <form class="hidden" id="login-form">
+                <input required maxlength="15" type="text" placeholder="WRITE YOUR NICKNAME" />
+                <input type="submit" value="Log In" class="login-button" />
+            </form>
+
+
+            <h1 id="greeting" class="hidden"></h1>
+
+            <div class="todo">
+                <form id="todo-form">
+                    <p>TO DO LIST</p>
+                    <input type="text" required />
+                </form>
+                <ul id="todo-list"></ul>
+            </div>
+
+            <div id="quote">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
     </div>
-    <div id="weather">
-    <span></span>
-        <span></span>
-    </div>
-    <script src="./greeting.js"></script>
-    <script src="./clock.js"></script>
-    <script src="./quotes.js"></script>
-    <script src="./background.js"></script>
-    <script src="./todo.js"></script>
-    <script src="./weather.js"></script>
-    
+
+    <script src="./javascript/greeting.js"></script>
+    <script src="./javascript/clock.js"></script>
+    <script src="./javascript/quotes.js"></script>
+    <script src="./javascript/background.js"></script>
+    <script src="./javascript/todo.js"></script>
+    <script src="./javascript/weather.js"></script>
+
 </body>
 
 </html>
