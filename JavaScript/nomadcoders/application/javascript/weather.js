@@ -1,6 +1,8 @@
 const city = document.querySelector("#weather span:first-child");
 const weather = document.querySelector("#weather span:last-child");
 const API_KEYS = "685f33fc24b25b65de9585aa5b20bac9";
+const ErrorWeather = document.querySelector("#weather p");
+
 
 function onGeoOk(position){
     const lat = position.coords.latitude;
@@ -16,6 +18,6 @@ function onGeoOk(position){
 }
 
 function onGeoError(){
-    alert("🥲");
+    ErrorWeather.innerText = "🦋"
 }
 navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);

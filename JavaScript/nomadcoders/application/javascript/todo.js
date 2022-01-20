@@ -30,7 +30,7 @@ function paintToDo(newTodo){
     const span = document.createElement("span"); //span 생성
     span.innerText = newTodo.text; //span 에 newToDo 값 넣어줌
     const button = document.createElement("button");
-    button.innerText = "Delete";
+    button.innerText = "Del";
     button.addEventListener("click", deleteToDo);
     li.appendChild(span); //span 을 li 안에 들어가게 함 
     li.appendChild(button); 
