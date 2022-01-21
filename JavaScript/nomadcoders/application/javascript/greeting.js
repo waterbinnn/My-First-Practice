@@ -3,7 +3,7 @@ const loginInput = document.querySelector("#login-form input");
 const greeting = document.querySelector("#greeting");
 
 const HIDDEN_CLASSNAME = "hidden";
-const USERNAME_KEY = "username"
+const USERNAME_KEY = "username";
 
 function onLoginSubmit(event) {
     event.preventDefault(); //submit 하면 정보 사라지는 브라우저 디폴트값을 방지
