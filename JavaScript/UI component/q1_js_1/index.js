@@ -1,3 +1,5 @@
+import "./style.css";
+// const button = document.querySelector("button")
 const navElem = document.querySelector("#nav");
 const navItems = Array.from(navElem.children);
 const contentsElem = document.querySelector("#contents");
